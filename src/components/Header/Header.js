@@ -6,9 +6,13 @@ function Header() {
     <header className='header'>
         
         <Navbar />
-        <h1>Discover property more easly</h1>
+        <div className='text-box'>
+            <h1>Discover property more easly</h1>
+            <h3>Rentoo helps people find their dream homes</h3>
+        </div>
     </header>
   )
 }
 
 export default Header
+

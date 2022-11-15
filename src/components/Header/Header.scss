@@ -1,22 +1,83 @@
-@mixin flex-center{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "../../assets/Variables.scss";
 .header{
-    background-image:linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../assets/headerBackground.jpg") ;
-    width:100%;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.88),rgba(0,0,0,0.8)), url("../../assets/headerBackground.jpg") ;
     height:100vh;
+    position: relative;
     background-size:cover;
     background-position:center;
-    margin:0 auto;
-    text-align: center;
-    h1{
+    .text-box{
+        position: absolute;
+        text-align: center;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
         color:white;
-        font-size:5rem;
-
+        h1{
+            font-size:7.2rem;
+            line-height: 1;
+            margin-bottom: 1.6rem;
+            animation:moveTop;
+            animation-duration: 1s;
+        }
+        h3{
+            margin:0;
+            font-size:3.2rem;
+            font-weight: 300;
+            animation:moveTop;
+            animation-duration: 1s;
+        }
     }
 }
 .navbar{
-    height:80px;
+    height:10rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 12.8rem;
+    font-size:2.4rem;
+    font-weight:600;
+    .logo-box{
+        
+        display:flex;
+        align-items: center;
+        gap:0.8rem;
+        svg{
+            height:4.8rem;
+            width:4.8rem;
+        }
+
+    }
+    .links-box{
+        display:flex;
+        gap:4.8rem;
+        align-items: center;
+        .link{
+            animation:moveTop;
+            animation-duration: 1s;
+        }
+    }
+    .btn-black
+    {
+        @include btn(rgb(5, 5, 5),white);
+        position: relative;
+        margin-left:3.2rem;
+        overflow: hidden;
+        transition: all 1s;
+        animation:moveTop;
+        animation-duration: 1s;
+    }
+    .btn-black:hover{
+        color:black;
+        background-color: white;
+    }
+}
+@keyframes moveTop{
+    0%{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity:1;
+        transform: 1;
+    }
 }

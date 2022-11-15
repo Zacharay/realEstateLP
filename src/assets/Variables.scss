@@ -1,0 +1,11 @@
+
+@mixin btn($backgroundColor,$fontColor){
+    border:none;
+    border-radius: 160rem;
+    font-size:2.4rem;
+    padding:1.2rem 6.4rem;
+    font-weight:700;
+    cursor:pointer;
+    background-color:$backgroundColor;
+    color:$fontColor;
+}
